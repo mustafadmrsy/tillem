@@ -1,26 +1,115 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --green: #234a41;
+  --green-deep: #1b352f;
+  --green-mid: #3a6b5e;
+  --green-pale: #5f7d6e;
+  --green-mist: #e8eeeb;
+  --cream: #d8cfc4;
+  --cream-light: #ede8e1;
+  --bg: #f6f8f4;
+  --text: #2f2f2f;
+  --text-mid: #5a5a52;
+  --text-muted: #8a8a80;
+  --gold: #c9a84c;
+  --gold-light: #e8d5a3;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-green: var(--green);
+  --color-green-deep: var(--green-deep);
+  --color-green-mid: var(--green-mid);
+  --color-green-pale: var(--green-pale);
+  --color-green-mist: var(--green-mist);
+  --color-cream: var(--cream);
+  --color-cream-light: var(--cream-light);
+  --color-bg: var(--bg);
+  --color-text: var(--text);
+  --color-text-mid: var(--text-mid);
+  --color-text-muted: var(--text-muted);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+.t-scrollbar-none::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.t-scrollbar-none {
+  scrollbar-width: none;
+}
+
+.marquee {
+  overflow: hidden;
+}
+
+.marquee__track {
+  display: flex;
+  width: max-content;
+  white-space: nowrap;
+  min-width: 200%;
+  animation: marquee-left 24s linear infinite;
+  will-change: transform;
+}
+
+.marquee:hover .marquee__track {
+  animation-play-state: paused;
+}
+
+.t-lineclamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@keyframes marquee-left {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  --reveal-x: 0px;
+  --reveal-y: 24px;
+  transform: translate3d(var(--reveal-x), var(--reveal-y), 0);
+  transition:
+    opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal--up {
+  --reveal-x: 0px;
+  --reveal-y: 24px;
+}
+
+.reveal--left {
+  --reveal-x: -24px;
+  --reveal-y: 0px;
+}
+
+.reveal--right {
+  --reveal-x: 24px;
+  --reveal-y: 0px;
+}
+
+.reveal[data-revealed="true"] {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
 }
