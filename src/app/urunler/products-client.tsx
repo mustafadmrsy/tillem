@@ -1,7 +1,6 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { useSearchParams } from "next/navigation";
 
 import { ProductCard } from "@/components/cards/ProductCard";
 import { RevealWrapper } from "@/components/ui/RevealWrapper";
@@ -18,16 +17,14 @@ const filters: Array<{ id: "all" | ProductCategory; label: string }> = [
   { id: "restoran", label: "Restoran" },
 ];
 
-export function ProductsClient({ products }: { products: Product[] }) {
-  const searchParams = useSearchParams();
-  const urlCat = (searchParams.get("cat") ?? "all") as
-    | "all"
-    | ProductCategory;
-  const initial = (filters.some((f) => f.id === urlCat) ? urlCat : "all") as
-    | "all"
-    | ProductCategory;
-
-  const [active, setActive] = useState<(typeof filters)[number]["id"]>(initial);
+export function ProductsClient({
+  products,
+  initialCat,
+}: {
+  products: Product[];
+  initialCat: "all" | ProductCategory;
+}) {
+  const [active, setActive] = useState<(typeof filters)[number]["id"]>(initialCat);
   const t = useT();
   const { lang } = useLanguage();
 
@@ -51,6 +48,7 @@ export function ProductsClient({ products }: { products: Product[] }) {
   const setActiveAndUrl = (next: (typeof filters)[number]["id"]) => {
     setActive(next);
     try {
+      if (typeof window === "undefined") return;
       const url = new URL(window.location.href);
       if (next === "all") url.searchParams.delete("cat");
       else url.searchParams.set("cat", next);
