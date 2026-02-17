@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Outfit } from "next/font/google";
-import { BottomNav } from "@/components/layout/BottomNav";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { AppProviders } from "@/components/providers/AppProviders";
@@ -73,10 +72,9 @@ export default function RootLayout({
       >
         <AppProviders>
           <Header />
-          <main className="pt-[68px] pb-28 [@media(min-width:900px)]:pb-0 [padding-bottom:calc(env(safe-area-inset-bottom,0px)+112px)]">
+          <main className="pt-[68px]">
             {children}
           </main>
-          <BottomNav />
           <Footer />
         </AppProviders>
       </body>

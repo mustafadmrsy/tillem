@@ -13,11 +13,11 @@ export function SectionTitle(props: {
     <div className={cn("space-y-4", center && "text-center", className)}>
       <div
         className={cn(
-          "inline-flex items-center gap-3 text-[0.58rem] font-semibold uppercase tracking-[0.3em] text-green-pale",
+          "inline-flex items-center gap-3 text-[0.58rem] font-semibold uppercase tracking-[0.3em] text-[#222222]/70",
           center && "justify-center"
         )}
       >
-        <span className="h-px w-7 bg-green-pale" />
+        <span className="h-px w-7 bg-[#222222]/35" />
         <span>{eyebrow}</span>
       </div>
 

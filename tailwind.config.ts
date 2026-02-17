@@ -6,20 +6,29 @@ export default {
     extend: {
       colors: {
         green: {
-          DEFAULT: "#234A41",
-          deep: "#1b352f",
-          mid: "#3a6b5e",
-          pale: "#5F7D6E",
-          mist: "#e8eeeb",
+          DEFAULT: "#1E3D35",
+          deep: "#18352E",
+          mid: "#2F4F46",
+          pale: "#3A5F55",
+          mist: "#EAEAEA",
         },
-        cream: { DEFAULT: "#D8CFC4", light: "#ede8e1" },
-        gold: { DEFAULT: "#c9a84c", light: "#e8d5a3" },
-        bg: { DEFAULT: "#F6F8F4" },
-        text: { DEFAULT: "#2F2F2F", mid: "#5a5a52", muted: "#8a8a80" },
+        cream: { DEFAULT: "#D8CFC4", light: "#F4F1EA" },
+        gold: { DEFAULT: "#3A5F55", light: "#EAEAEA" },
+        bg: { DEFAULT: "#F5F3EF" },
+        surface: { DEFAULT: "#F4F1EA", soft: "#F0EEE9" },
+        text: { DEFAULT: "#222222", mid: "#333333", muted: "#2B2B2B" },
+        header: { DEFAULT: "#E9E7E3" },
+        brand: { DEFAULT: "#F0EEE9" },
+        fabric: { DEFAULT: "#EDEBE6" },
+        process: { DEFAULT: "#5A3E2B" },
+        divider: { DEFAULT: "#3A5F55" },
       },
       fontFamily: {
         display: ["Cormorant Garamond", "serif"],
         body: ["Outfit", "sans-serif"],
+      },
+      boxShadow: {
+        card: "0 18px 55px rgba(27,53,47,0.12)",
       },
       animation: {
         "scroll-track": "scrollTrack 28s linear infinite",

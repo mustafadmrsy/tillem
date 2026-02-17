@@ -1,14 +1,14 @@
 import { About } from "@/components/sections/About";
-import { Categories } from "@/components/sections/Categories";
-import { Hero } from "@/components/sections/Hero";
+import { HomeTopCategories } from "@/components/sections/HomeTopCategories";
 import { Process } from "@/components/sections/Process";
+import { ProductTypes } from "@/components/sections/ProductTypes";
 import { References } from "@/components/sections/References";
 
 export default function Home() {
   return (
     <>
-      <Hero />
-      <Categories />
+      <HomeTopCategories />
+      <ProductTypes />
       <About />
       <Process />
       <References />

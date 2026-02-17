@@ -41,7 +41,7 @@ export function Process() {
   ];
 
   return (
-    <section className="bg-cream-light py-24 [@media(min-width:768px)]:py-28">
+    <section className="bg-process py-24 [@media(min-width:768px)]:py-28">
       <div className="mx-auto max-w-[1280px] px-6 [@media(min-width:1024px)]:px-10">
         <RevealWrapper>
           <SectionTitle
@@ -49,32 +49,33 @@ export function Process() {
             title={
               <>
                 {t.process.title1}
-                <em className="italic text-green">{t.process.titleEm}</em>
+                <em className="italic text-cream-light">{t.process.titleEm}</em>
                 <br />
                 {t.process.title3}
               </>
             }
+            className="[&_*]:text-cream-light [&_p]:text-cream-light/80"
           />
         </RevealWrapper>
 
-        <div className="mt-16 grid grid-cols-1 overflow-hidden rounded-sm border border-green/10 bg-white/40 shadow-[0_18px_60px_rgba(0,0,0,0.06)] [@media(min-width:768px)]:grid-cols-2 [@media(min-width:1024px)]:grid-cols-4">
+        <div className="mt-16 grid grid-cols-1 overflow-hidden rounded-sm border border-divider/60 bg-surface shadow-[0_18px_60px_rgba(0,0,0,0.10)] [@media(min-width:768px)]:grid-cols-2">
           {steps.map((s, idx) => (
             <RevealWrapper
               key={s.num}
               from={idx % 2 === 0 ? "left" : "right"}
-              className="border-b border-green/10 bg-white/55 p-10 transition-colors hover:bg-white/80 [@media(min-width:1024px)]:border-b-0 [@media(min-width:1024px)]:border-r"
+              className="border-b border-divider/40 bg-surface p-10 [@media(min-width:768px)]:border-r [&:nth-child(2n)]:[@media(min-width:768px)]:border-r-0 [&:nth-last-child(-n+2)]:border-b-0"
               staggerDelay={0.1}
               staggerIndex={idx}
             >
-              <div className="font-display text-[3.5rem] font-light leading-none text-green/10">
+              <div className="font-display text-[3.5rem] font-light leading-none text-text/10">
                 {s.num}
               </div>
-              <div className="mt-6 flex h-11 w-11 items-center justify-center rounded-full bg-green transition-transform duration-300 hover:scale-[1.08]">
+              <div className="mt-6 flex h-11 w-11 items-center justify-center rounded-full bg-[#222222]">
                 <svg
                   viewBox="0 0 24 24"
                   className="h-5 w-5"
                   fill="none"
-                  stroke="rgb(232 213 163)"
+                  stroke="rgb(234 234 234)"
                   strokeWidth="1.5"
                   strokeLinecap="round"
                 >

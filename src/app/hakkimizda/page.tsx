@@ -58,7 +58,7 @@ const timeline = [
 export default function AboutPage() {
   return (
     <div>
-      <section className="relative overflow-hidden bg-green-deep py-20">
+      <section className="relative overflow-hidden bg-[#222222] py-20">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(201,168,76,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(201,168,76,0.04)_1px,transparent_1px)] [background-size:80px_80px]" />
         <div className="relative z-[1] mx-auto max-w-[1280px] px-6 [@media(min-width:1024px)]:px-10">
           <RevealWrapper>
@@ -94,7 +94,7 @@ export default function AboutPage() {
           <div className="mt-16 space-y-10">
             {timeline.map((t, idx) => (
               <RevealWrapper key={t.year} staggerDelay={0.08} staggerIndex={idx}>
-                <div className="grid grid-cols-1 items-center gap-8 rounded-sm border border-green/10 bg-white/50 p-8 [@media(min-width:1024px)]:grid-cols-2">
+                <div className="grid grid-cols-1 items-center gap-8 rounded-sm border border-green/10 bg-surface/50 p-8 [@media(min-width:1024px)]:grid-cols-2">
                   <div className={idx % 2 === 0 ? "order-1" : "order-1 [@media(min-width:1024px)]:order-2"}>
                     <div className="inline-flex items-center gap-3 text-[0.58rem] font-semibold uppercase tracking-[0.3em] text-green-pale">
                       <span className="h-px w-7 bg-green-pale" />
@@ -131,7 +131,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 gap-6 [@media(min-width:1024px)]:grid-cols-2">
             {["Misyon", "Vizyon"].map((k, idx) => (
               <RevealWrapper key={k} staggerDelay={0.12} staggerIndex={idx}>
-                <div className="rounded-sm border border-green/10 bg-white/50 p-10">
+                <div className="rounded-sm border border-green/10 bg-surface/50 p-10">
                   <div className="border-l-2 border-green pl-5">
                     <div className="text-[0.6rem] font-semibold uppercase tracking-[0.28em] text-green">
                       {k}
@@ -174,7 +174,7 @@ export default function AboutPage() {
             {["ISO 9001:2015", "Oeko-Tex 100", "Quality", "Sustainability"].map(
               (c, idx) => (
                 <RevealWrapper key={c} staggerDelay={0.08} staggerIndex={idx}>
-                  <div className="flex aspect-square items-center justify-center rounded-sm border border-green/10 bg-white/50">
+                  <div className="flex aspect-square items-center justify-center rounded-sm border border-green/10 bg-surface/50">
                     <span className="font-display text-[1rem] tracking-[0.12em] text-text/55">
                       {c}
                     </span>

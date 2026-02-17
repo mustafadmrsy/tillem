@@ -11,8 +11,8 @@ export function About() {
   const t = useT();
 
   return (
-    <section className="relative overflow-hidden bg-green-deep py-24 [@media(min-width:768px)]:py-28">
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(201,168,76,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(201,168,76,0.04)_1px,transparent_1px)] [background-size:64px_64px]" />
+    <section className="relative overflow-hidden bg-white py-24 [@media(min-width:768px)]:py-28">
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(58,95,85,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(58,95,85,0.08)_1px,transparent_1px)] [background-size:64px_64px]" />
 
       <div className="relative z-[1] mx-auto grid max-w-[1280px] grid-cols-1 items-center gap-14 px-6 [@media(min-width:1024px)]:grid-cols-2 [@media(min-width:1024px)]:gap-20 [@media(min-width:1024px)]:px-10">
         <RevealWrapper>
@@ -25,16 +25,7 @@ export function About() {
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(35,74,65,0.3),rgba(27,53,47,0.5))]" />
-            </div>
-
-            <div className="absolute -bottom-6 -right-6 flex h-[130px] w-[130px] flex-col items-center justify-center rounded-full bg-gold shadow-[0_12px_40px_rgba(0,0,0,0.3)]">
-              <div className="font-display text-[2.2rem] font-light leading-none text-green-deep">
-                1965
-              </div>
-              <div className="mt-1 text-[0.52rem] font-semibold uppercase tracking-[0.2em] text-green-deep/80">
-                Kuruluş
-              </div>
+              <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(31,63,55,0.10),rgba(24,53,46,0.35))]" />
             </div>
           </div>
         </RevealWrapper>
@@ -47,14 +38,14 @@ export function About() {
                 <>
                   {t.about.titleLine1}
                   <br />
-                  <em className="italic text-gold-light">{t.about.titleEm}</em>
+                  <em className="italic text-green">{t.about.titleEm}</em>
                 </>
               }
               description={undefined}
               className="[&_*]:text-left"
             />
 
-            <div className="mt-6 space-y-4 text-[0.9rem] leading-[1.9] tracking-[0.02em] text-cream/60">
+            <div className="mt-6 space-y-4 text-[0.9rem] leading-[1.9] tracking-[0.02em] text-text-mid">
               <p>{t.about.p1}</p>
               <p>{t.about.p2}</p>
             </div>
@@ -70,16 +61,16 @@ export function About() {
               ].map((t) => (
                 <li
                   key={t}
-                  className="flex items-center gap-2 text-[0.75rem] font-medium tracking-[0.06em] text-cream/70"
+                  className="flex items-center gap-2 text-[0.75rem] font-medium tracking-[0.06em] text-text"
                 >
-                  <span className="h-1.5 w-1.5 rounded-full bg-gold" />
+                  <span className="h-1.5 w-1.5 rounded-full bg-divider" />
                   {t}
                 </li>
               ))}
             </ul>
 
             <div className="mt-9">
-              <Button href="/hakkimizda" variant="outline-gold">
+              <Button href="/hakkimizda" variant="primary">
                 {t.about.cta}
               </Button>
             </div>

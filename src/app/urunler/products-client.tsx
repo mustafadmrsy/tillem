@@ -60,7 +60,7 @@ export function ProductsClient({
 
   return (
     <div className="bg-bg">
-      <section className="relative overflow-hidden bg-green-deep pt-20 pb-16 [@media(min-width:768px)]:pt-24">
+      <section className="relative overflow-hidden bg-[#222222] pt-20 pb-16 [@media(min-width:768px)]:pt-24">
         <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(201,168,76,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(201,168,76,0.05)_1px,transparent_1px)] [background-size:56px_56px]" />
         <div className="pointer-events-none absolute left-0 right-0 top-0 h-0.5 bg-[linear-gradient(90deg,transparent,#c9a84c_30%,#e8d5a3_50%,#c9a84c_70%,transparent)]" />
 
@@ -96,7 +96,7 @@ export function ProductsClient({
         </div>
       </section>
 
-      <div className="sticky top-0 z-40 border-b border-green/10 bg-bg/95 backdrop-blur-md">
+      <div className="sticky top-0 z-40 border-b border-divider/40 bg-bg/95 backdrop-blur-md">
         <div className="mx-auto flex h-14 max-w-[1200px] items-center justify-between gap-4 px-5 [@media(min-width:768px)]:px-10">
           <div className="t-scrollbar-none flex flex-1 items-center gap-1 overflow-x-auto">
             {filters.map((f) => (
@@ -106,8 +106,8 @@ export function ProductsClient({
                 onClick={() => setActiveAndUrl(f.id)}
                 className={
                   active === f.id
-                    ? "shrink-0 rounded-[2px] border border-green bg-green px-4 py-1.5 text-[0.6rem] font-medium uppercase tracking-[0.16em] text-cream"
-                    : "shrink-0 rounded-[2px] border border-transparent px-4 py-1.5 text-[0.6rem] font-medium uppercase tracking-[0.16em] text-text-muted transition-colors hover:border-green/15 hover:text-green"
+                    ? "shrink-0 rounded-[2px] border border-[#222222] bg-[#222222] px-4 py-1.5 text-[0.6rem] font-medium uppercase tracking-[0.16em] text-white"
+                    : "shrink-0 rounded-[2px] border border-transparent px-4 py-1.5 text-[0.6rem] font-medium uppercase tracking-[0.16em] text-text-muted transition-colors hover:border-[#222222]/15 hover:text-text"
                 }
               >
                 {filterLabel(f.id, f.label)}
@@ -117,7 +117,7 @@ export function ProductsClient({
 
           <div className="hidden items-center gap-3 [@media(min-width:520px)]:flex">
             <select
-              className="cursor-pointer appearance-none rounded-[2px] border border-green/15 bg-transparent px-3 py-1.5 pr-8 text-[0.6rem] font-medium tracking-[0.1em] text-text-muted outline-none"
+              className="cursor-pointer appearance-none rounded-[2px] border border-divider/50 bg-transparent px-3 py-1.5 pr-8 text-[0.6rem] font-medium tracking-[0.1em] text-text-muted outline-none"
               defaultValue="default"
             >
               <option value="default">{t.products.sortDefault}</option>
@@ -129,7 +129,7 @@ export function ProductsClient({
       </div>
 
       <section className="mx-auto max-w-[1200px] px-5 pt-12 pb-24 [@media(min-width:768px)]:px-10">
-        <div className="grid border-l border-t border-green/10 [grid-template-columns:repeat(1,1fr)] [@media(min-width:480px)]:[grid-template-columns:repeat(2,1fr)] [@media(min-width:780px)]:[grid-template-columns:repeat(3,1fr)] [@media(min-width:1100px)]:[grid-template-columns:repeat(4,1fr)]">
+        <div className="grid border-l border-t border-divider/40 [grid-template-columns:repeat(1,1fr)] [@media(min-width:480px)]:[grid-template-columns:repeat(2,1fr)] [@media(min-width:780px)]:[grid-template-columns:repeat(3,1fr)] [@media(min-width:1100px)]:[grid-template-columns:repeat(4,1fr)]">
           {filtered.map((p, idx) => (
             <RevealWrapper
               key={p.id}

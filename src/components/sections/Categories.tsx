@@ -20,7 +20,7 @@ export function Categories() {
             title={
               <>
                 {t.categories.title.split("Tekstil")[0]}
-                <em className="italic text-green">Tekstil</em>
+                <em className="italic text-[#222222]">Tekstil</em>
                 {t.categories.title.split("Tekstil")[1]}
               </>
             }

@@ -23,7 +23,7 @@ export function ProductGallery(props: { images: string[]; title: string }) {
               className={
                 isActive
                   ? "relative h-[72px] w-[72px] shrink-0 overflow-hidden rounded-[2px] border border-gold opacity-100"
-                  : "relative h-[72px] w-[72px] shrink-0 overflow-hidden rounded-[2px] border border-green/15 opacity-60 transition-[opacity,border-color] hover:border-green-pale hover:opacity-80"
+                  : "relative h-[72px] w-[72px] shrink-0 overflow-hidden rounded-[2px] border border-divider/40 opacity-60 transition-[opacity,border-color] hover:border-divider/70 hover:opacity-80"
               }
               aria-label={`${props.title} ${idx + 1}`}
             >
@@ -51,14 +51,14 @@ export function ProductGallery(props: { images: string[]; title: string }) {
           className="object-cover transition-transform duration-700 [transition-timing-function:cubic-bezier(0.22,1,0.36,1)] [transform:scale(1.03)] hover:scale-[1.07]"
         />
 
-        <div className="absolute right-3 top-3 z-[3] flex h-[34px] w-[34px] items-center justify-center rounded-full border border-gold/20 bg-green-deep/70 opacity-0 transition-[opacity,transform] duration-300 [transform:scale(0.85)] backdrop-blur hover:opacity-100 hover:[transform:scale(1)]">
+        <div className="absolute right-3 top-3 z-[3] flex h-[34px] w-[34px] items-center justify-center rounded-full border border-gold/20 bg-[#222222]/70 opacity-0 transition-[opacity,transform] duration-300 [transform:scale(0.85)] backdrop-blur hover:opacity-100 hover:[transform:scale(1)]">
           <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="rgb(232 213 163)" strokeWidth="1.8" strokeLinecap="round">
             <circle cx="11" cy="11" r="8" />
             <path d="m21 21-4.35-4.35M11 8v6M8 11h6" />
           </svg>
         </div>
 
-        <div className="absolute bottom-3 right-3 z-[3] rounded-[1px] bg-green-deep/60 px-2.5 py-1 text-[0.5rem] font-semibold tracking-[0.14em] text-cream/70 backdrop-blur">
+        <div className="absolute bottom-3 right-3 z-[3] rounded-[1px] bg-[#222222]/55 px-2.5 py-1 text-[0.5rem] font-semibold tracking-[0.14em] text-cream/70 backdrop-blur">
           <span className="text-gold-light">{active + 1}</span> / {total}
         </div>
       </div>

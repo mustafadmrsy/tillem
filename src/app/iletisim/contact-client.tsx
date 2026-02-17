@@ -25,7 +25,7 @@ export function ContactClient() {
             />
           </RevealWrapper>
 
-          <div className="mt-10 space-y-4 rounded-sm border border-green/10 bg-white/50 p-8">
+          <div className="mt-10 space-y-4 rounded-sm border border-green/10 bg-surface/50 p-8">
             {["Adres", "Telefon", "E-posta", "Çalışma Saatleri"].map((label, idx) => (
               <RevealWrapper key={label} staggerDelay={0.08} staggerIndex={idx}>
                 <div className="grid grid-cols-[90px_1fr] gap-4">
@@ -48,7 +48,7 @@ export function ContactClient() {
         </div>
 
         <RevealWrapper staggerDelay={0.1} staggerIndex={1}>
-          <div className="rounded-sm border border-gold/25 bg-white/40 p-8">
+          <div className="rounded-sm border border-gold/25 bg-surface/40 p-8">
             <div className="text-[0.6rem] font-semibold uppercase tracking-[0.28em] text-gold">
               {t.contact.formTitle}
             </div>
@@ -66,7 +66,7 @@ export function ContactClient() {
               <div className="[grid-column:1/-1] pt-2">
                 <button
                   type="button"
-                  className="inline-flex w-full items-center justify-center rounded-sm bg-green px-7 py-3 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-cream transition-transform duration-300 hover:-translate-y-0.5 hover:bg-green-mid"
+                  className="inline-flex w-full items-center justify-center rounded-sm bg-[#222222] px-7 py-3 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-white transition-transform duration-300 hover:-translate-y-0.5 hover:brightness-110"
                 >
                   {t.contact.send}
                 </button>

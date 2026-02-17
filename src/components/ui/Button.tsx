@@ -29,15 +29,15 @@ export function Button(props: ButtonAsButtonProps | ButtonAsLinkProps) {
   const variant = props.variant ?? "primary";
 
   const base =
-    "inline-flex items-center justify-center gap-2 rounded-sm px-7 py-3 text-[0.7rem] font-semibold uppercase tracking-[0.2em] transition-transform duration-300 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/50";
+    "inline-flex items-center justify-center gap-2 rounded-sm px-7 py-3 text-[0.7rem] font-semibold uppercase tracking-[0.2em] transition-transform duration-300 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-divider/60";
 
   const variants: Record<ButtonVariant, string> = {
     primary:
-      "bg-gold text-green-deep hover:bg-gold-light shadow-[0_14px_50px_rgba(0,0,0,0.12)]",
+      "bg-[#222222] text-white hover:brightness-110 shadow-[0_14px_50px_rgba(0,0,0,0.12)]",
     ghost:
-      "border border-cream/30 text-cream/85 hover:border-cream/70 hover:text-cream bg-transparent",
+      "border border-divider text-text/90 hover:border-text/35 hover:text-text bg-transparent",
     "outline-gold":
-      "relative overflow-hidden border border-gold/60 text-gold-light bg-transparent before:absolute before:inset-0 before:bg-gold before:translate-x-[-105%] before:transition-transform before:duration-[400ms] before:[transition-timing-function:cubic-bezier(0.22,1,0.36,1)] hover:before:translate-x-0 hover:border-gold",
+      "relative overflow-hidden border border-[#222222] text-text bg-transparent before:absolute before:inset-0 before:bg-[#222222] before:translate-x-[-105%] before:transition-transform before:duration-[400ms] before:[transition-timing-function:cubic-bezier(0.22,1,0.36,1)] hover:before:translate-x-0 hover:border-[#222222]",
   };
 
   const cls = cn(base, variants[variant], props.className);

@@ -36,7 +36,7 @@ export function ProductDetailClient({ product }: { product: Product }) {
 
   return (
     <div className="bg-bg">
-      <div className="relative bg-green-deep">
+      <div className="relative bg-[#222222]">
         <div className="absolute left-0 right-0 top-0 h-0.5 bg-[linear-gradient(90deg,transparent,#c9a84c_30%,#e8d5a3_50%,#c9a84c_70%,transparent)]" />
         <div className="mx-auto flex h-[52px] max-w-[1280px] items-center justify-between px-6 [@media(min-width:1024px)]:px-10">
           <nav className="flex items-center gap-2 text-[0.58rem] font-medium uppercase tracking-[0.14em]">
@@ -59,7 +59,7 @@ export function ProductDetailClient({ product }: { product: Product }) {
         </div>
       </div>
 
-      <div className="relative h-[340px] overflow-hidden bg-green-deep [@media(max-width:600px)]:h-[260px]">
+      <div className="relative h-[340px] overflow-hidden bg-[#222222] [@media(max-width:600px)]:h-[260px]">
         <div
           className="absolute inset-0 [transform:scale(1.04)]"
           style={{
@@ -96,11 +96,11 @@ export function ProductDetailClient({ product }: { product: Product }) {
 
         <div className="pt-10">
           <div className="mb-8 flex items-center gap-4">
-            <span className="h-px w-6 bg-green/20" />
-            <span className="text-[0.52rem] font-semibold uppercase tracking-[0.26em] text-green-pale">
+            <span className="h-px w-6 bg-divider/40" />
+            <span className="text-[0.52rem] font-semibold uppercase tracking-[0.26em] text-text/70">
               {t.productDetail.infoLabel}
             </span>
-            <span className="h-px flex-1 bg-green/10" />
+            <span className="h-px flex-1 bg-divider/25" />
           </div>
 
           <p className="text-[0.88rem] leading-[1.92] tracking-[0.02em] text-text-mid">
@@ -112,7 +112,7 @@ export function ProductDetailClient({ product }: { product: Product }) {
               {tags.slice(0, 8).map((tg) => (
                 <span
                   key={tg}
-                  className="rounded-full border border-green/15 px-3 py-1 text-[0.51rem] font-medium uppercase tracking-[0.16em] text-text-muted"
+                  className="rounded-full border border-divider/50 px-3 py-1 text-[0.51rem] font-medium uppercase tracking-[0.16em] text-text-muted"
                 >
                   {tg}
                 </span>
@@ -120,8 +120,8 @@ export function ProductDetailClient({ product }: { product: Product }) {
             </div>
           ) : null}
 
-          <div className="mt-8 overflow-hidden rounded-[2px] border border-green/10 bg-white">
-            <div className="flex items-center gap-2 bg-green-deep px-5 py-4">
+          <div className="mt-8 overflow-hidden rounded-[2px] border border-divider/40 bg-surface">
+            <div className="flex items-center gap-2 bg-[#222222] px-5 py-4">
               <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="#c9a84c" strokeWidth="1.8" strokeLinecap="round">
                 <path d="M9 11l3 3L22 4" />
                 <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" />
@@ -131,13 +131,13 @@ export function ProductDetailClient({ product }: { product: Product }) {
               </span>
             </div>
 
-            <div className="divide-y divide-green/10">
+            <div className="divide-y divide-divider/40">
               {product.specs.map((s) => (
                 <div
                   key={s.label}
-                  className="grid grid-cols-[160px_1fr] border-b border-green/10 last:border-b-0 hover:bg-green-mist/60"
+                  className="grid grid-cols-[160px_1fr] border-b border-divider/40 last:border-b-0 hover:bg-black/5"
                 >
-                  <div className="border-r border-green/10 px-5 py-3 text-[0.72rem] font-medium tracking-[0.02em] text-text">
+                  <div className="border-r border-divider/40 px-5 py-3 text-[0.72rem] font-medium tracking-[0.02em] text-text">
                     {s.label}
                   </div>
                   <div className="px-5 py-3 text-[0.72rem] font-light tracking-[0.02em] text-text-mid">
@@ -183,9 +183,9 @@ export function ProductDetailClient({ product }: { product: Product }) {
             ].map((f) => (
               <div
                 key={f.title}
-                className="flex items-center gap-3 rounded-[2px] border border-green/10 bg-white px-4 py-3"
+                className="flex items-center gap-3 rounded-[2px] border border-divider/40 bg-surface px-4 py-3"
               >
-                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-green">
+                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#222222]">
                   <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="rgb(232 213 163)" strokeWidth="1.8" strokeLinecap="round">
                     {f.icon}
                   </svg>
@@ -340,11 +340,7 @@ function RelatedProducts({ current }: { current: Product }) {
             <Link
               key={p.slug}
               href={`/urunler/${p.slug}`}
-              className="group block bg-white transition-colors hover:bg-[#fafaf8]"
-              style={{
-                borderRight: "1px solid rgba(35,74,65,0.10)",
-                borderBottom: "1px solid rgba(35,74,65,0.10)",
-              }}
+              className="group block border-r border-b border-green/10 bg-surface transition-colors hover:bg-surface-soft"
             >
               <div className="relative aspect-[16/11] overflow-hidden bg-cream-light">
                 <div

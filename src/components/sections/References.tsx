@@ -22,7 +22,7 @@ export function References() {
   const items = [...brands, ...brands];
 
   return (
-    <section className="bg-bg py-24 [@media(min-width:768px)]:py-28">
+    <section className="bg-brand py-24 [@media(min-width:768px)]:py-28">
       <div className="mx-auto max-w-[1280px] px-6 [@media(min-width:1024px)]:px-10">
         <RevealWrapper>
           <SectionTitle
@@ -38,17 +38,17 @@ export function References() {
         </RevealWrapper>
       </div>
 
-      <div className="marquee relative mt-14 border-y border-green/10 bg-white/50">
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-[2] w-28 bg-[linear-gradient(to_right,#F6F8F4,transparent)]" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 z-[2] w-28 bg-[linear-gradient(to_left,#F6F8F4,transparent)]" />
+      <div className="marquee relative mt-14 border-y border-divider/50 bg-surface/60">
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-[2] w-28 bg-[linear-gradient(to_right,#F0EEE9,transparent)]" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-[2] w-28 bg-[linear-gradient(to_left,#F0EEE9,transparent)]" />
 
         <div className="marquee__track items-center">
           {items.map((b, i) => (
             <div
               key={`${b}-${i}`}
-              className="flex h-20 w-[180px] flex-none items-center justify-center border-r border-green/10 px-6"
+              className="flex h-20 w-[180px] flex-none items-center justify-center border-r border-divider/40 px-6"
             >
-              <span className="font-display text-[1rem] font-normal tracking-[0.12em] text-text/35 transition-colors hover:text-green">
+              <span className="font-display text-[1rem] font-normal tracking-[0.12em] text-text/60 transition-colors hover:text-text">
                 {b}
               </span>
             </div>
